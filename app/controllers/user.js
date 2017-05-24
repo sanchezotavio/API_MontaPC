@@ -4,6 +4,8 @@ var User = mongoose.model('User')
 
 var PC = mongoose.model('PC')
 
+var domain = require('../../config/domain')
+
 module.exports = (app) => {
   var userController = {
     load: (req, res) => {
@@ -37,7 +39,7 @@ module.exports = (app) => {
       if (req.user) {
         next()
       } else {
-        res.redirect('/login')
+        res.redirect(`${domain.active()}/login`)
       }
     },
 

@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:prod": "set NODE_ENV=production && npm run build ",
+    "build:dev": "set NODE_ENV=development && npm run build ",
     "build": "nodemon server",
     "start": "node server"
   },
   "author": "Otávio Sanchez",
   "license": "ISC",
-  "dependencies": {    
+  "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",
@@ -23,6 +25,7 @@
     "helmet": "^2.3.0",
     "history": "^1.8.4",
     "loader-utils": "^1.0.2",
+    "location-href": "^1.0.0",
     "method-override": "^2.3.6",
     "mongo-sanitize": "^1.0.0",
     "mongodb": "^2.2.16",
@@ -33,10 +36,10 @@
     "node-cache": "^4.1.1",
     "passport": "^0.3.2",
     "passport-facebook": "^2.1.1",
-    "passport-google-oauth": "^1.0.0"    
+    "passport-google-oauth": "^1.0.0"
   },
-  "devDependencies": {  
-    "nodemon": "^1.11.0",  
+  "devDependencies": {
+    "nodemon": "^1.11.0",
     "rimraf": "^2.5.4"
   }
 }
